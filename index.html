@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shohanur Rahman | Developer Portfolio</title>
+<link rel="icon" type="image/png" href="logo.png" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<style>
+body{background:#020617}
+html{scroll-behavior:smooth}
+.glass{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(14px)}
+.gradient-text{background:linear-gradient(90deg,#22d3ee,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.card-hover{transition:.3s}
+.card-hover:hover{transform:translateY(-10px) scale(1.02)}
+.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,#6366f1,transparent);filter:blur(160px);opacity:.25}
+nav a{position:relative;transition:color .3s}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#22d3ee;transition:width .3s ease}
+nav a:hover{color:#22d3ee}
+nav a:hover::after{width:100%}
+.logo-area:hover img{transform:scale(1.08);filter:drop-shadow(0 0 8px rgba(34,211,238,.7));transition:.25s}
+.header-scrolled{backdrop-filter:blur(18px);background:rgba(2,6,23,0.85);box-shadow:0 8px 25px rgba(0,0,0,.35);transition:.3s}
+#scrollTopBtn{position:fixed;bottom:30px;right:30px;background:#22d3ee;color:#020617;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 8px 20px rgba(0,0,0,.35);cursor:pointer;opacity:0;pointer-events:none;transition:all .3s ease;}
+#scrollTopBtn.show{opacity:1;pointer-events:auto}
+#scrollTopBtn:hover{transform:translateY(-3px)}
+.justify-pro{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.7;max-width:65ch;}
+</style>
+</head>
+
+<body class="text-white font-sans">
+
+<div id="particles-js" class="fixed w-full h-full -z-10"></div>
+<div class="hero-glow"></div>
+
+<header class="fixed top-0 w-full z-50 glass">
+<div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+
+<a href="#" id="logoHome" class="flex items-center gap-3 logo-area">
+<img src="logo.png" alt="Logo" class="h-8 w-auto" />
+</a>
+
+<nav class="space-x-6 hidden md:flex">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="min-h-screen flex items-center pt-24">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+
+<div class="space-y-6">
+<p class="text-cyan-400">AI • Full Stack • Python</p>
+<h1 class="text-5xl md:text-6xl font-bold">Hi, I'm <span class="gradient-text">Shohanur Rahman</span></h1>
+<p class="text-gray-400 max-w-lg justify-pro">
+Computer Science graduate focused on software development, machine learning applications and problem‑solving systems.
+</p>
+
+<div class="flex gap-4">
+<button id="openResume" class="bg-white/10 px-6 py-3 rounded-lg border border-white/20 flex items-center gap-2">
+<i class="fa fa-file-lines"></i>
+<span>View Resume</span>
+</button>
+<a href="#projects" class="bg-cyan-500 px-6 py-3 rounded-lg">View Projects</a>
+</div>
+</div>
+
+<div class="flex justify-center">
+<img src="profile.jpg" class="w-56 sm:w-64 md:w-80 rounded-full border-4 border-cyan-500 shadow-2xl"/>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-3xl font-bold mb-6">About Me</h2>
+<p class="text-gray-400 justify-pro">
+I am Shohanur Rahman, a Computer Science & Engineering graduate from Daffodil International University.
+</p>
+</div>
+</section>
+
+<footer class="py-8 border-t border-white/10 mt-20">
+<div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
+<p>© 2026 Shohanur Rahman. All rights reserved.</p>
+</div>
+</footer>
+
+<div id="scrollTopBtn"><i class="fa fa-arrow-up"></i></div>
+
+<script>
+const scrollBtn=document.getElementById("scrollTopBtn");
+window.addEventListener("scroll",()=>{
+if(window.scrollY>300){scrollBtn.classList.add("show");}
+else{scrollBtn.classList.remove("show");}
+});
+scrollBtn.addEventListener("click",()=>{
+window.scrollTo({top:0,behavior:"smooth"});
+});
+</script>
+
+</body>
+</html>
